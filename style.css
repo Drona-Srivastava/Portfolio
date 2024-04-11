@@ -1,0 +1,31 @@
+body
+{
+    background-color: black;
+}
+
+.picture
+{
+    clip-path: circle(50% at 50% 50%);
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    animation: pictureanimate 5s infinite alternate;
+}
+
+@keyframes pictureanimate
+{
+    0% 
+    {
+        transform: scale(1);
+    }
+    50% 
+    {
+        transform: scale(1.1); /* Scale up to 110% */
+    }
+    100% 
+    {
+        transform: scale(1);
+    }
+}
