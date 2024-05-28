@@ -47,6 +47,107 @@ html{
     text-decoration: underline;
     text-underline-offset: 0.4rem;
 }
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50vh;
+    margin-top: 15vh;
+}
+
+.pic{
+    align-content: center;  
+}
+#pic{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    clip-path: circle(45.0% at 50% 50%);
+}
+img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.about{
+    text-align: center;
+    display: flex;
+    gap: 3%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+}
+
+.intro{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about_name{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.role{
+    color: rgb(31, 31, 31);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+.buttons{
+    margin-top: 3%;
+    display: flex;
+    justify-content:center;
+    gap: 3%;
+    height: 9vh;
+}
+.resume{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 100px;
+    font-weight: 600;   
+    font-size: 15px;
+    width: 14vw;
+}
+
+.resume:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.contactinfo{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 100px;
+    font-weight: 600;   
+    font-size: 15px;
+    width: 14vw;
+}
+
+.contactinfo:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#git,#linkedin{
+    height: 40px;
+    width: 40px;
+    object-fit:cover;
+    clip-path: circle(47.2% at 50% 50%);
+}
+
+#git{
+    margin-left:2% ;
+}
+
+
 /*
 .header{
     display: flex;
