@@ -1,31 +1,102 @@
-body
-{
-    background-color: black;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-.picture
-{
-    clip-path: circle(50% at 50% 50%);
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    top: 10%;
-    left: 15%;
-    animation: pictureanimate 5s infinite alternate;
+body{
+    font-family: "Exo 2", sans-serif;
 }
 
-@keyframes pictureanimate
-{
-    0% 
-    {
-        transform: scale(1);
-    }
-    50% 
-    {
-        transform: scale(1.1); /* Scale up to 110% */
-    }
-    100% 
-    {
-        transform: scale(1);
-    }
+html{
+    scroll-behavior: smooth;
 }
+
+
+.header{
+    margin:1vw;
+    display: flex;
+    width: 96%;
+
+}
+
+.name{
+    padding: 4vh;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.nav-links{
+    list-style: none;
+    gap: 10%;
+    margin-left: auto;
+    align-content: space-around;    
+}
+
+#about,
+#projects,
+#contact{
+    margin: 10px;
+    font-size: 30px;
+    color: black;
+    text-decoration:none;
+    font-weight: 500;
+}
+#about:hover,
+#projects:hover,
+#contact:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+/*
+.header{
+    display: flex;
+    gap: 10px;
+}
+.info{
+    display: flex;
+    gap: 20px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.written{
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+
+#resume{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+#contact{
+    background-color:black;
+    color: white;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+
+#picture{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    clip-path: circle(47.2% at 50% 50%);
+}
+
+#git, #linkedin{
+    height: 30px;
+    width: 30px;
+    object-fit:cover;
+    clip-path: circle(47.2% at 50% 50%);
+}*/
