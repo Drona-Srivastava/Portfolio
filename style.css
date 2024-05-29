@@ -3,6 +3,8 @@
     padding: 0px;
 }
 
+/* General */
+
 body{
     font-family: "Exo 2", sans-serif;
 }
@@ -11,25 +13,129 @@ html{
     scroll-behavior: smooth;
 }
 
+/* Nav Bar */
 
 .header{
     margin:1vw;
     display: flex;
     width: 96%;
-
+    flex-wrap: wrap;
+    height: 12vh;
 }
 
 .name{
-    padding: 4vh;
+    /* padding: 4vh; */
     font-weight: bolder;
     font-size: 40px;
+    align-content: space-around;
 }
+
+.name:hover,
+.intro:hover,
+.about_name:hover,
+.role:hover{
+    cursor: default;
+}
+
 .nav-links{
     list-style: none;
     gap: 10%;
     margin-left: auto;
     align-content: space-around;    
 }
+
+/* Hamburger nav */
+
+.hamburger{
+    display: none;
+    margin:5vw;
+    width: 85%;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 12vh;
+    
+}
+
+.ham-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.ham-name{
+    /* padding: 4vh; */
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.ham-icon{
+    /* padding: 4vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.ham-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.ham-links{
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.ham-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.ham-links.open{
+    max-height: 300px;
+}
+
+.ham-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,8px);
+}
+
+.ham-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-icon.open span:last-child{
+    transform: rotate(-45deg) translate(11px,-9px)
+}
+
+.ham-icon span:first-child{
+    transform: none;
+}
+
+.ham-icon span:nth-child(2){
+    transform: none;
+}
+
+.ham-icon span:last-child{
+    transform: none;
+}
+/* Intro */
+
+
 
 #about,
 #projects,
@@ -39,7 +145,9 @@ html{
     color: black;
     text-decoration:none;
     font-weight: 500;
+    transition: all 300ms ease;
 }
+
 #about:hover,
 #projects:hover,
 #contact:hover{
@@ -48,7 +156,7 @@ html{
     text-underline-offset: 0.4rem;
 }
 
-.info{
+#profile{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,16 +167,12 @@ html{
 .pic{
     align-content: center;  
 }
+
 #pic{
     height: 300px;
     width: 300px;
     object-fit: cover;
     clip-path: circle(45.0% at 50% 50%);
-}
-img{
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
 }
 
 .about{
@@ -96,7 +200,6 @@ img{
     font-weight: 500;
 }
 
-
 .buttons{
     margin-top: 3%;
     display: flex;
@@ -104,6 +207,7 @@ img{
     gap: 3%;
     height: 9vh;
 }
+
 .resume{
     background-color: black;
     color: white;
@@ -113,6 +217,7 @@ img{
     font-weight: 600;   
     font-size: 15px;
     width: 14vw;
+    transition: all 300ms ease;
 }
 
 .resume:hover{
@@ -120,6 +225,7 @@ img{
     color: black;
     cursor: pointer;
 }
+
 .contactinfo{
     background-color: black;
     color: white;
@@ -129,6 +235,7 @@ img{
     font-weight: 600;   
     font-size: 15px;
     width: 14vw;
+    transition: all 300ms ease;
 }
 
 .contactinfo:hover{
@@ -136,6 +243,7 @@ img{
     color: black;
     cursor: pointer;
 }
+
 #git,#linkedin{
     height: 40px;
     width: 40px;

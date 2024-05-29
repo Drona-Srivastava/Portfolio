@@ -11,15 +11,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="header">
+        <nav class="header">
             <div class="name">Drona Srivastava</div>
             <div class="nav-links">
                 <a href="#about" id="about">About</a>
                 <a href="#projects" id="projects">Projects</a>
                 <a href="#contact" id="contact">Contact</a>
             </div>
-        </div>
-        <div class="info">
+        </nav>
+        <nav class="hamburger">
+            <div class="ham-name">Drona Srivastava</div>
+            <div class="ham-menu">
+                <div class="ham-icon" onclick="toggleMenu()"> 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="ham-links">
+                    <a href="#about" id="about" onclick="toggleMenu()">About</a>
+                    <a href="#projects" id="projects" onclick="toggleMenu()">Projects</a>
+                    <a href="#contact" id="contact" onclick="toggleMenu()">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <section id="profile">
             <div class="pic"><img id="pic" src="images/Pic.jpg"   alt="Drona Srivastava">
             </div>
             <div class="about">
@@ -29,6 +44,7 @@
                 <div class="buttons">
                     <button class="resume">Download Resume</button>
                     <button class="contactinfo">Contact Info    </button>
+                    <!-- <button class="contactinfo" onclick="location.href='https://bennettfeely.com/clippy/'">Contact Info</button> -->
                 </div>
                 <div class="out-links">
                     <a href="https://www.linkedin.com/in/drona-srivastava-141a4a288/" ><img id="linkedin" src="images/linkedin.jpg" alt="Linked In"></a>
@@ -36,7 +52,10 @@
                     
                 </div>
             </div>
-        </div>
+        </section>
+        <section id="about">
+                
+        </section>
         <script src="app.js"></script>
     </body>
 </html>
