@@ -13,6 +13,15 @@ html{
     scroll-behavior: smooth;
 }
 
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    /* border: 5px black solid; */
+}
+
 /* Nav Bar */
 
 .header{
@@ -24,7 +33,7 @@ html{
 }
 
 .name{
-    /* padding: 4vh; */
+    margin-left: 5%;
     font-weight: bolder;
     font-size: 40px;
     align-content: space-around;
@@ -41,6 +50,7 @@ html{
     list-style: none;
     gap: 10%;
     margin-left: auto;
+    margin-right: 3%;
     align-content: space-around;    
 }
 
@@ -137,9 +147,7 @@ html{
 
 
 
-#about,
-#projects,
-#contact{
+.nav-links a{
     margin: 10px;
     font-size: 30px;
     color: black;
@@ -148,9 +156,7 @@ html{
     transition: all 300ms ease;
 }
 
-#about:hover,
-#projects:hover,
-#contact:hover{
+.nav-links .a:hover{
     color: grey;
     text-decoration: underline;
     text-underline-offset: 0.4rem;
@@ -160,8 +166,8 @@ html{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 50vh;
-    margin-top: 15vh;
+    height: 78vh;
+    margin-top: 8vh;
 }
 
 .pic{
@@ -169,13 +175,13 @@ html{
 }
 
 #pic{
-    height: 300px;
-    width: 300px;
+    height:500px;
+    width: 500px;
     object-fit: cover;
     clip-path: circle(45.0% at 50% 50%);
 }
 
-.about{
+.about1{
     text-align: center;
     display: flex;
     gap: 3%;
@@ -215,7 +221,7 @@ html{
     border: 2px black solid;
     border-radius: 100px;
     font-weight: 600;   
-    font-size: 15px;
+    font-size: 25px;
     width: 14vw;
     transition: all 300ms ease;
 }
@@ -233,7 +239,7 @@ html{
     border: 2px black solid;
     border-radius: 100px;
     font-weight: 600;   
-    font-size: 15px;
+    font-size: 25px;
     width: 14vw;
     transition: all 300ms ease;
 }
@@ -255,57 +261,130 @@ html{
     margin-left:2% ;
 }
 
+.text_p1{
+    font-size:20px;
+    text-align: center;
+    font-weight: 500;
+}
 
-/*
-.header{
+.title{
+    margin-top: 1%;
+    font-size:65px;
+    text-align: center;
+    font-weight: 700;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4%;
+    gap: 80px;
+}
+
+.skills{
+    padding: 25px;
+    border: 2px black solid;
+    border-radius: 70px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20vw;
+    height: 25vh;
+}
+
+p#skill{
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.skills2{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    flex-direction:row;
 }
-.info{
+
+.skills2 span{
+    border: 2px lightgray solid;
+    border-radius: 18px;
+    background-color: lightgray;
+    padding: 8px;
+    font-weight: 700;
+}
+
+.skills img,
+.education img{
+    height: 60px;
+    width: 60px;
+}
+
+.education{
+    padding: 25px;
+    border: 2px black solid;
+    border-radius: 70px;;
     display: flex;
-    gap: 20px;
-    border: 5px solid black;
-    padding: 10px;
-    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25vw;
+    height: 25vh;
 }
 
-.written{
-    border: 5px solid black;
-    padding: 10px;
-    margin: 10px;
-    font-weight: bolder;
-}
-
-
-#resume{
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border: 2px black solid;
-    border-radius: 100px;
+#edu{
+    font-size: 20px;
+    margin: 5px;
     font-weight: 600;
 }
 
-#contact{
-    background-color:black;
-    color: white;
-    padding: 10px;
-    border: 2px black solid;
-    border-radius: 100px;
+.edu2{
+    font-size: 20px;
+    margin: 5px;
     font-weight: 600;
+    text-align: center;
 }
 
-
-#picture{
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    clip-path: circle(47.2% at 50% 50%);
+.edu3{
+    font-size: 20px;
+    margin: 5px;
+    font-weight: 600;
+    text-align: center;
 }
 
-#git, #linkedin{
-    height: 30px;
-    width: 30px;
-    object-fit:cover;
-    clip-path: circle(47.2% at 50% 50%);
-}*/
+.edu4{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: 25vh;
+    margin-left: 22%;
+    margin-top: 2%;
+}
+
+.edu5{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    color: rgb(23, 22, 22);
+}
+
+#arrow{
+    height: 40px;
+    width: 40px;
+    float: right;
+    padding: 30px;
+}
+
+.text_p1,
+.title,
+.skills2 span,
+#skill,
+#edu,
+.edu2,
+.edu3,
+.edu5{
+    cursor:default;
+}
