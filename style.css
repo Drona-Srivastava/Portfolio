@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 /* General */
@@ -362,7 +363,7 @@ p#skill{
     height: 25vh;
     margin-left: 22%;
     margin-top: 2%;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 50px;
     color: rgb(23, 22, 22);
