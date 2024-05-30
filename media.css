@@ -4,5 +4,119 @@
     }
     .hamburger{
         display: flex;
+        margin:0vw 5vw 0vw 5vw;
     }
+    #arrow{
+        display: none;
+    }   
+    section{
+        padding-top: 5vh;
+        height: fit-content;
+        margin: 0rem 2rem;
+        box-sizing: border-box;
+        min-height: fit-content;
+    }
+
+    .pic{
+        justify-content: center;
+        display: flex;
+        z-index: 1;
+    }
+    #pic{
+        height: 250px;
+        width: 250px;
+    }
+
+    #profile{
+        flex-direction: column;
+        margin-top: 7%;
+        padding-bottom: 5vh;
+        height: 65vh;
+        justify-content:none;
+        padding-top: 1vh;
+    }
+
+    .about_name{
+        font-size: 35px;
+    }    
+
+    .role{
+        font-size: 20px;
+    }
+
+    .buttons{
+        margin: 5vh 0;
+        padding: auto;
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+    }
+
+    .resume,
+    .contactinfo{
+        width: 300px;
+    }
+
+    .resume:hover,
+    .contactinfo:hover{
+        background-color: black;
+        color: white;
+    }
+
+    /* About Page */
+
+    .text_p1{
+        font-size: 15px;
+    }
+
+    .title{
+        font-size: 50px;
+    }
+
+    .skills img,
+    .education img{
+        height: 30px;
+        width: 30px;
+    }
+
+    p#skill,
+    #edu{
+        font-size: 15px;
+    }
+
+    .cards{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .skills,
+    .education{
+        width: 280px;
+        height: 150px;
+        padding: 20px;
+    }
+
+    .skills span{
+        font-size: 10px;
+    }
+
+    .edu4{
+        display: flex;
+        margin: 0px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .edu5{
+        width: 70vw;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .edu3{
+        padding-bottom: 5px;
+    }
+
+
 }
