@@ -398,3 +398,84 @@ p#skill{
 .edu5{
     cursor:default;
 }
+
+
+/* Experience */
+
+#experience{
+    padding-top: 3.2vh;
+}
+
+.cards2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+}
+
+.text1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.title2{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.frontend,
+.others{
+    border: 2px black solid;
+    padding: 10px;
+    border-radius: 20px;
+    height: 300px;
+    width: 400px;
+}
+
+#front,
+#other{
+    text-align: center;
+    font-size: 30px;
+    padding: 1.5rem 0rem 2.5rem 0rem;
+}
+
+.contentimg{
+    height: 30px;
+    padding-top: 7%;
+}
+
+.content1,.content2{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+    
+}
+
+.content11,
+.content22{
+    display: flex;
+    width: 10rem;
+    gap: 0.5rem;
+}
+
+.content11 p,
+.content22 p{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+#arrow2{
+    height: 40px;
+    width: 40px;
+    float: right;
+    padding: 30px;
+    position: absolute;
+    right: 5%;
+    top: 270%;
+}
