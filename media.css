@@ -126,15 +126,22 @@
 
     .frontend,
     .others{
-        width: 380px;
+        width: 340px;
     }
 
     #experience{
-        margin-left: 1rem;
+        margin: 0 1rem;
     }
 
     .content1,
     .content2{
         gap: 1.5rem;
     }
+
+    .content11,
+.content22{
+    display: flex;
+    width: 7rem;
+    gap: 0.5rem;
+}
 }
