@@ -379,13 +379,17 @@ p#skill{
 .edu5{
     width: 50vw;
 }
-#arrow{
+
+.arrow{
     height: 40px;
     width: 40px;
     float: right;
     padding: 30px;
     position: absolute;
     right: 5%;
+}
+
+#arrow1{
     top: 180%;
 }
 
@@ -475,11 +479,5 @@ p#skill{
 }
 
 #arrow2{
-    height: 40px;
-    width: 40px;
-    float: right;
-    padding: 30px;
-    position: absolute;
-    right: 5%;
     top: 270%;
 }
