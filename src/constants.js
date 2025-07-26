@@ -1,50 +1,55 @@
-
+import frontend from '../src/assets/frontend.png';
+import ml from '../src/assets/ml.png';
+import game from '../src/assets/gaming.png';
+import acm from '../src/assets/acm.webp';
+import codesa from '../src/assets/codesa.png';
 export const services = [
     {
-        title: "Technology Enthusiast",
-        icon: 'https://csgeeek.github.io/web.png',
+        title: "Front-End Dev",
+        icon: frontend,
     },
     {
-        title: "Software Engineer",
-        icon: 'https://csgeeek.github.io/web.png',
+        title: "ML Enthusiast",
+        icon: ml,
     },
     {
-        title: "Photographer",
-        icon: 'https://csgeeek.github.io/web.png',
+        title: "Gamer",
+        icon: game,
     },
 ];
 
-export const name = 'Nithin';
+export const name = 'Drona';
 
 export const experiences = [
     {
-        'company': 'Inncircles Technologies',
-        'role': 'Product Developer',
-        'duration': 'April 2023 - Present',
-        'logo': 'https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/e5gz1yggdy8sc1umna3e',
+        'company': 'ACM VIT Chennai',
+        'role': 'Web Master => Vice Chair',
+        'duration': 'October 2024 - Present',
+        'logo': acm,
         'points': [
-            'Involved in dynamic contributions to web and mobile📱 development projects, actively influencing and improving project outcomes.',
-            'Developed multiple shared components to simplify tasks for fellow developers, boosting efficiency and teamwork.',
-            'Enhanced product performance through significant contributions to backend development, optimizing essential components for improved efficiency 📈.',
-            'Implemented data security for the company’s product to provide role-based access control ⚙️.'
+            'Promoted for exceptional leadership and contribution to technical events',
+            'Managing club operations, mentoring juniors, and overseeing tech initiatives',
+            'Driving strategic planning across departments',
+            'Built and maintained event websites using ReactJS and Firebase',
+            'Handled 500+ participant registrations across multiple events',
+            'Led a 3-member team, to create a site to boost hackathon registrations by 40%'
         ],
-        'url': 'https://inncircles.com/#home',
+        'url': 'https://vitchennai.acm.org/',
     },
     {
-        'company': 'AT & T',
-        'role': 'Technical Intern',
-        'duration': 'Jan 2023 - March 2023',
-        'logo': 'https://www.att.com/ecms/dam/att/consumer/global/logos/att_globe_500x500.jpg',
+        'company': 'CodeSA',
+        'role': 'Web Development Intern',
+        'duration': 'March 2024 - April 2024',
+        'logo': codesa,
         'points': [
-            'Gained experience with Git version control contributing to the development and maintenance of code repositories.',
-            'Worked on the application dashboard, making it more user-friendly and improving its overall functionality📱.'
-        ],
-        'url': 'https://www.att.com/',
+            'Collaborated with the team to design the company’s website from scratch',
+            'Contributed to early-stage planning and UI/UX design decisions for the project'
+        ]
     },
 ]
 
 
 
-export const EMAIL_JS_SERVICE_ID = process.env.REACT_APP_EMAIL_JS_SERVICE_ID;
-export const EMAIL_JS_TEMPLATE_ID = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID;
-export const EMAIL_JS_PUBLIC_KEY = process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY;
+export const EMAIL_JS_SERVICE_ID = "service_vc1x5xn";
+export const EMAIL_JS_TEMPLATE_ID = "template_wsl1w76";
+export const EMAIL_JS_PUBLIC_KEY = "xRFqGvTcIVn7e-_7Z";
