@@ -1,26 +1,28 @@
 import React from "react";
 import Footer from "./Footer";
+import techjam from "../assets/techjam.png";
+import easycv from "../assets/EasyCV.png";
 
 const ProjectCard = ({ image, title, description, git, technologies }) => {
   return (
     <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      {title === "Snap Shot" && (
+      {title === "Tech Jam" && (
         <div>
           <img
             className="w-full rounded-t-lg h-auto object-cover "
-            // src={vpn}
-            alt="Snap Shot"
+            src={techjam}
+            alt="techjam"
           />
         </div>
       )}
-      {title === "Co People" && (
+      {title === "Easy CV" && (
         <div>
           <img
             className="w-full rounded-t-lg h-auto object-cover "
-            // src={copeople}
-            alt="Co People"
+            src={easycv}
+            alt="EasyCv"
           />
-        </div>
+        </div>  
       )}
       <div className="p-4 sm:p-6">
         {/* Remove invalid anchor, just use the heading */}
@@ -75,20 +77,20 @@ const Projects = () => {
 
 export const project = [
   {
-    title: "Co People",
+    title: "Easy CV",
     description:
-      "Co People is a dynamic web application I crafted using React, Node JS and React. This project is a modern and engaging social platform that allows users to connect, share content and interact seamlessly.",
-    // image: { vpn },
-    git: "https://github.com/nithingooud/CoPeople",
-    technologies: ["MongoDb", "ReactJS", "NodeJS"],
+      "EasyCV is a customizable web-based resume builder designed to simplify the resume creation process for students and professionals. Users can input their details and choose from multiple professional templates with real-time preview. The project is currently being enhanced with AI features to auto-generate resumes by extracting data from LinkedIn and GitHub profiles and making process even more efficient.",
+    image: { easycv },
+    git: "https://github.com/Drona-Srivastava/Resume-Generator",
+    technologies: ["ReactJS", "CSS"],
   },
   {
-    title: "Snap Shot",
+    title: "Tech Jam",
     description:
-      "SnapShot is a stunning portfolio that I exclusively designed using React JS and tailwind CSS.This Project serves as a representation of a photographer’s work, highlighting their portfolio and services.",
-    // image: { copeople },
-    git: "https://github.com/nithingooud/vpn_studios",
-    technologies: ["React JS", "tailwind CSS"],
+      "A responsive web application built for the ACM Club’s TechJam event to streamline access to technical lecture content and gamify student engagement. The platform provided a centralized space for students to view sessions on various technologies and track their learning progress. It featured a real-time leaderboard that dynamically updated participant scores, enhancing competition and motivation throughout the event.",
+    image: { techjam },
+    git: "https://github.com/Drona-Srivastava/techjam",
+    technologies: ["React JS", "CSS"],
   },
 ];
 
