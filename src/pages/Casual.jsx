@@ -32,6 +32,7 @@ const MotionArticle = motion.article;
 
 function Casual() {
   const [activeSection, setActiveSection] = useState("hero");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const skills = useMemo(
     () => [
@@ -148,6 +149,7 @@ function Casual() {
     document
       .getElementById(id)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setMobileMenuOpen(false);
   };
 
   const navItems = [
@@ -160,8 +162,17 @@ function Casual() {
   return (
     <div className="min-h-[100dvh] w-full overflow-x-hidden bg-[#121f35] text-[#e8edf5] selection:bg-[#39e58c]/30">
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#111c2e]/90 backdrop-blur">
-        <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-center px-3 py-2 sm:px-8">
-          <ul className="flex w-full items-center justify-center gap-3 overflow-x-auto whitespace-nowrap text-sm sm:w-auto sm:gap-5 sm:text-lg">
+        <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between px-3 py-2 sm:px-8">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/20 text-white md:hidden"
+            aria-label="Toggle navigation"
+          >
+            <span className="text-lg leading-none">{mobileMenuOpen ? "x" : "≡"}</span>
+          </button>
+
+          <ul className="hidden items-center justify-center gap-5 text-lg md:flex">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
@@ -185,7 +196,39 @@ function Casual() {
               </a>
             </li>
           </ul>
+
+          <div className="h-9 w-9 md:hidden" />
         </div>
+
+        {mobileMenuOpen ? (
+          <div className="border-t border-white/10 bg-[#111c2e] px-3 py-2 md:hidden">
+            <ul className="flex flex-col gap-1">
+              {navItems.map((item) => (
+                <li key={`mobile-${item.id}`}>
+                  <button
+                    onClick={() => scrollTo(item.id)}
+                    className={`w-full rounded-md px-3 py-2 text-left transition ${
+                      activeSection === item.id
+                        ? "bg-white/10 text-[#53ff7f]"
+                        : "text-[#b48bf2] hover:bg-white/5 hover:text-[#53ff7f]"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="/dev"
+                  className="block w-full rounded-md px-3 py-2 text-left text-[#b48bf2] transition hover:bg-white/5 hover:text-[#53ff7f]"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Programmer Mode
+                </a>
+              </li>
+            </ul>
+          </div>
+        ) : null}
       </nav>
 
       <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-24 sm:px-8 sm:pb-20">
