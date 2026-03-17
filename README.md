@@ -62,7 +62,7 @@ Areas of interest include:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/Drona-Srivastava/Portfolio
+cd Portfolio
 npm install
 npm run dev
