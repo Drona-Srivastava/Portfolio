@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
 #root {
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available; 
   display: flex;
   flex-direction: column;
 }
 
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  min-height: 100dvh;
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 body {
