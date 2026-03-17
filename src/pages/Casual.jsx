@@ -150,17 +150,19 @@ function Casual() {
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const navItems = [
+    { id: "hero", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "experience", label: "Experience" },
+    { id: "projects", label: "Projects" },
+  ];
+
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#121f35] text-[#e8edf5] selection:bg-[#39e58c]/30">
+    <div className="min-h-[100dvh] w-full overflow-x-hidden bg-[#121f35] text-[#e8edf5] selection:bg-[#39e58c]/30">
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#111c2e]/90 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-center px-4 sm:px-8">
-          <ul className="flex items-center gap-5 text-lg">
-            {[
-              { id: "hero", label: "Home" },
-              { id: "about", label: "About" },
-              { id: "experience", label: "Experience" },
-              { id: "projects", label: "Projects" },
-            ].map((item) => (
+        <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-center px-3 py-2 sm:px-8">
+          <ul className="flex w-full items-center justify-center gap-3 overflow-x-auto whitespace-nowrap text-sm sm:w-auto sm:gap-5 sm:text-lg">
+            {navItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => scrollTo(item.id)}
@@ -186,8 +188,8 @@ function Casual() {
         </div>
       </nav>
 
-      <main className="mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-8">
-        <section id="hero" className="scroll-mt-24 py-14 sm:py-20">
+      <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-24 sm:px-8 sm:pb-20">
+        <section id="hero" className="scroll-mt-24 py-10 sm:py-20">
           <MotionDiv
             variants={containerVariant}
             initial="hidden"
@@ -196,21 +198,21 @@ function Casual() {
           >
             <MotionDiv
               variants={itemVariant}
-              className="text-3xl font-bold sm:text-5xl"
+              className="text-3xl font-bold leading-tight sm:text-5xl"
             >
               Drona Srivastava
             </MotionDiv>
 
             <MotionDiv
               variants={itemVariant}
-              className="mt-3 text-2xl text-[#53ff7f]"
+              className="mt-3 text-xl text-[#53ff7f] sm:text-2xl"
             >
               Software Engineer
             </MotionDiv>
 
             <MotionDiv
               variants={itemVariant}
-              className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-[#53dfff]"
+              className="mx-auto mt-7 max-w-2xl text-sm leading-relaxed text-[#53dfff] sm:text-base"
             >
               Full-stack developer focused on building AI-first applications,
               polished interfaces, and practical systems that solve real user
@@ -223,7 +225,7 @@ function Casual() {
             >
               <a
                 href="mailto:srivastavadrona@gmail.com"
-                className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-[#171f2e] px-5 py-2.5 text-sm hover:border-white/20 hover:bg-[#1e2738] transition"
+                className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-[#171f2e] px-4 py-2 text-xs hover:border-white/20 hover:bg-[#1e2738] transition sm:px-5 sm:py-2.5 sm:text-sm"
               >
                 <FiMail />
                 Get in Touch
@@ -233,7 +235,7 @@ function Casual() {
                 href="https://drive.google.com/file/d/1bDn6PxBuCt6EmsZONjZiUbgKB7-CTBs0/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-[#f1f4f7] px-5 py-2.5 text-sm text-[#101828] hover:opacity-90 transition"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-[#f1f4f7] px-4 py-2 text-xs text-[#101828] hover:opacity-90 transition sm:px-5 sm:py-2.5 sm:text-sm"
               >
                 <FiDownload />
                 Download CV
@@ -242,7 +244,7 @@ function Casual() {
 
             <MotionDiv
               variants={itemVariant}
-              className="mt-8 flex justify-center gap-7 text-2xl"
+              className="mt-8 flex justify-center gap-6 text-xl sm:gap-7 sm:text-2xl"
             >
               <a
                 href="https://github.com/Drona-Srivastava"
@@ -278,7 +280,7 @@ function Casual() {
 
         <MotionSection
           id="about"
-          className="scroll-mt-24 py-10"
+          className="scroll-mt-24 py-8 sm:py-10"
           variants={containerVariant}
           initial="hidden"
           whileInView="show"
@@ -286,7 +288,7 @@ function Casual() {
         >
           <MotionDiv
             variants={itemVariant}
-            className="mb-8 text-3xl font-bold sm:text-4xl"
+            className="mb-8 text-2xl font-bold sm:text-4xl"
           >
             Skills
           </MotionDiv>
@@ -294,14 +296,14 @@ function Casual() {
           <div className="grid gap-9 md:grid-cols-2">
             {skills.map((group) => (
               <MotionDiv key={group.title} variants={itemVariant}>
-                <h3 className={`mb-4 text-xl font-semibold ${group.accent}`}>
+                <h3 className={`mb-4 text-lg font-semibold sm:text-xl ${group.accent}`}>
                   {group.title}
                 </h3>
                 <div className="flex flex-wrap gap-2.5">
                   {group.items.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-md border border-white/60 bg-[#1a2942] px-3 py-1.5 text-sm font-medium text-[#53ff7f]"
+                      className="rounded-md border border-white/60 bg-[#1a2942] px-3 py-1.5 text-xs font-medium text-[#53ff7f] sm:text-sm"
                     >
                       {skill}
                     </span>
@@ -314,7 +316,7 @@ function Casual() {
         
         <MotionSection
           id="experience"
-          className="scroll-mt-24 py-14"
+          className="scroll-mt-24 py-10 sm:py-14"
           variants={containerVariant}
           initial="hidden"
           whileInView="show"
@@ -322,7 +324,7 @@ function Casual() {
         >
           <MotionDiv
             variants={itemVariant}
-            className="mb-8 text-3xl font-bold sm:text-4xl"
+            className="mb-8 text-2xl font-bold sm:text-4xl"
           >
             Experience
           </MotionDiv>
@@ -332,11 +334,11 @@ function Casual() {
               variants={itemVariant}
               className="border-l-2 border-white/60 pl-4"
             >
-              <h3 className="text-xl font-semibold text-[#b48bf2]">
+              <h3 className="text-lg font-semibold text-[#b48bf2] sm:text-xl">
                 Web Development Intern
               </h3>
-              <p className="mt-2 text-lg text-[#53ff7f]">Code SA</p>
-              <p className="mt-2 text-base text-[#37d9c7]">
+              <p className="mt-2 text-base text-[#53ff7f] sm:text-lg">Code SA</p>
+              <p className="mt-2 text-sm text-[#37d9c7] sm:text-base">
                 March, 2025 - April, 2025 • Remote
               </p>
             </MotionArticle>
@@ -344,8 +346,8 @@ function Casual() {
         </MotionSection>
 
         <MotionSection
-          id="experience"
-          className="scroll-mt-24 py-14"
+          id="education"
+          className="scroll-mt-24 py-10 sm:py-14"
           variants={containerVariant}
           initial="hidden"
           whileInView="show"
@@ -353,7 +355,7 @@ function Casual() {
         >
           <MotionDiv
             variants={itemVariant}
-            className="mb-8 text-3xl font-bold sm:text-4xl"
+            className="mb-8 text-2xl font-bold sm:text-4xl"
           >
             Education
           </MotionDiv>
@@ -363,11 +365,11 @@ function Casual() {
               variants={itemVariant}
               className="border-l-2 border-white/60 pl-4"
             >
-              <h3 className="text-xl font-semibold text-[#b48bf2]">
+              <h3 className="text-lg font-semibold text-[#b48bf2] sm:text-xl">
                 BTech in CSE (AIML)
               </h3>
-              <p className="mt-2 text-lg text-[#53ff7f]">VIT Chennai</p>
-              <p className="mt-2 text-base text-[#37d9c7]">
+              <p className="mt-2 text-base text-[#53ff7f] sm:text-lg">VIT Chennai</p>
+              <p className="mt-2 text-sm text-[#37d9c7] sm:text-base">
                 2023 - 2027 • Chennai, India
               </p>
             </MotionArticle>
@@ -376,13 +378,13 @@ function Casual() {
               variants={itemVariant}
               className="border-l-2 border-[#5de2ff] pl-4"
             >
-              <h3 className="text-xl font-semibold text-[#b48bf2]">
+              <h3 className="text-lg font-semibold text-[#b48bf2] sm:text-xl">
                 Higher Secondary (CBSE)
               </h3>
-              <p className="mt-2 text-lg text-[#53ff7f]">
+              <p className="mt-2 text-base text-[#53ff7f] sm:text-lg">
                 Shanti Asiatic School
               </p>
-              <p className="mt-2 text-base text-[#37d9c7]">
+              <p className="mt-2 text-sm text-[#37d9c7] sm:text-base">
                 2021 - 2023 • India
               </p>
             </MotionArticle>
@@ -391,7 +393,7 @@ function Casual() {
 
         <MotionSection
           id="projects"
-          className="scroll-mt-24 py-10"
+          className="scroll-mt-24 py-8 sm:py-10"
           variants={containerVariant}
           initial="hidden"
           whileInView="show"
@@ -399,7 +401,7 @@ function Casual() {
         >
           <MotionDiv
             variants={itemVariant}
-            className="mb-8 text-3xl font-bold sm:text-4xl"
+            className="mb-8 text-2xl font-bold sm:text-4xl"
           >
             Projects
           </MotionDiv>
@@ -413,24 +415,24 @@ function Casual() {
                 className="rounded-xl border border-white/55 bg-[#16243b] p-5"
               >
                 <div className="mb-3 flex items-start justify-between gap-3">
-                  <h3 className="text-2xl font-semibold">{project.name}</h3>
+                  <h3 className="text-xl font-semibold sm:text-2xl">{project.name}</h3>
                   <a
                     href={project.link}
                     target={
                       project.link.startsWith("http") ? "_blank" : undefined
                     }
                     rel="noreferrer"
-                    className="text-2xl text-[#e8edf5] hover:text-[#53ff7f] transition"
+                    className="text-xl text-[#e8edf5] hover:text-[#53ff7f] transition sm:text-2xl"
                   >
                     <FiArrowUpRight />
                   </a>
                 </div>
 
-                <p className="text-base leading-relaxed text-[#53dfff]">
+                <p className="text-sm leading-relaxed text-[#53dfff] sm:text-base">
                   {project.description}
                 </p>
 
-                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#b48bf2]">
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-xs text-[#b48bf2] sm:text-sm">
                   {project.points.map((point) => (
                     <li key={point}>{point}</li>
                   ))}
@@ -440,7 +442,7 @@ function Casual() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-md border border-white/60 bg-[#182b45] px-2.5 py-1 text-xs font-semibold text-[#53ff7f]"
+                      className="rounded-md border border-white/60 bg-[#182b45] px-2.5 py-1 text-[11px] font-semibold text-[#53ff7f] sm:text-xs"
                     >
                       {tech}
                     </span>
@@ -452,10 +454,10 @@ function Casual() {
         </MotionSection>
       </main>
 
-      <footer className="pb-10 pt-4">
+      <footer className="pb-8 pt-4 sm:pb-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-8">
           <div className="mx-auto w-full max-w-xs border-t border-white/70" />
-          <p className="mt-5 text-center text-[15px] text-white/90">
+          <p className="mt-5 text-center text-xs text-white/90 sm:text-[15px]">
             © 2026 Drona Srivastava. All rights reserved.
           </p>
         </div>
@@ -464,7 +466,7 @@ function Casual() {
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-5 right-5 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#151b25] text-xl text-white/90 shadow-lg hover:bg-[#1d2532]"
+        className="fixed bottom-4 right-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#151b25] text-lg text-white/90 shadow-lg hover:bg-[#1d2532] sm:bottom-5 sm:right-5 sm:h-11 sm:w-11 sm:text-xl"
         aria-label="Scroll to top"
       >
         <FiArrowUp />
