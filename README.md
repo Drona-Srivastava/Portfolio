@@ -1,16 +1,68 @@
-# React + Vite
+# Synapse — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive portfolio built to showcase my work, skills, and projects as a developer focused on AI, full-stack development, and intelligent systems.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About the Project
 
-## React Compiler
+Synapse is designed as more than just a portfolio. It represents the idea of connecting thought to execution, inspired by how synapses connect neurons in the brain.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project reflects my approach to development:
+- Building clean and scalable systems
+- Combining AI with real-world applications
+- Focusing on user experience and performance
 
-## Expanding the ESLint configuration
+The goal was to create something that feels like a product, not just a resume.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Smooth scroll-based animations
+- Minimal and modern dark-themed UI
+- Structured sections for skills, experience, and projects
+- Interactive social links using custom SVG icons
+- Fully responsive design
+- Optimized performance
+
+---
+
+## Tech Stack
+
+- Frontend: React.js
+- Styling: Tailwind CSS
+- Animations: Intersection Observer and CSS transitions
+- Icons: Custom SVG
+
+---
+
+## Sections
+
+- Home — Introduction and overview
+- Skills — Technologies and tools
+- Experience — Professional experience and internships
+- Projects — Selected work
+
+---
+
+## Vision
+
+This portfolio is a step toward building intelligent and impactful software.
+
+Areas of interest include:
+- Artificial Intelligence and Machine Learning
+- Full-stack development
+- Building tools that improve learning and productivity
+
+---
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+npm install
+npm run dev
