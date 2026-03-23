@@ -13,29 +13,36 @@
           "value": "index, follow"
         }
       ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
     }
   ],
   "routes": [
     {
-      "src": "/robots.txt",
-      "dest": "/public/robots.txt",
-      "headers": {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/public/sitemap.xml",
-      "headers": {
-        "Content-Type": "application/xml; charset=utf-8"
-      }
-    },
-    {
       "src": "/assets/(.*)",
-      "dest": "/dist/assets/$1"
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/$1"
     },
     {
-      "src": "^/(?!assets/|robots\\.txt|sitemap\\.xml).*",
+      "src": "^(?!/robots\\.txt$|/sitemap\\.xml$|/assets/).*$",
       "dest": "/index.html"
     }
   ]
