@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div
+    <main
       className="h-screen overflow-hidden flex flex-col items-center justify-center 
                  bg-gradient-to-b from-[#0f1b2d] to-[#0b1320] text-white px-6"
     >
@@ -9,13 +9,10 @@ function Home() {
         Choose your path
       </h1>
 
-      <p className="text-green-400 mb-14 text-lg">
-        Two programs. Same output.
-      </p>
+      <p className="text-green-400 mb-14 text-lg">Two programs. Same output.</p>
 
       {/* Cards */}
       <div className="flex flex-col md:flex-row gap-8">
-        
         {/* Casual Card */}
         <a href="/casual">
           <div
@@ -35,9 +32,7 @@ function Home() {
               Casual Experience
             </h2>
 
-            <p className="text-gray-400 text-sm">
-              Simple, Clean, Direct.
-            </p>
+            <p className="text-gray-400 text-sm">Simple, Clean, Direct.</p>
           </div>
         </a>
 
@@ -68,9 +63,8 @@ function Home() {
             </p>
           </div>
         </a>
-
       </div>
-    </div>
+    </main>
   );
 }
 

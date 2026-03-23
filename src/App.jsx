@@ -1,15 +1,25 @@
-import Home from './components/Home'
-import './App.css'
-import Dev from "./pages/Dev";
-import Casual from "./pages/Casual";
+import { Suspense, lazy } from "react";
+import "./App.css";
+
+const Home = lazy(() => import("./components/Home"));
+const Dev = lazy(() => import("./pages/Dev"));
+const Casual = lazy(() => import("./pages/Casual"));
 
 function App() {
   const path = window.location.pathname;
 
-  if (path === "/dev") return <Dev />;
-  if (path === "/casual") return <Casual />;
+  let Route = Home;
 
-  return <Home />;
+  if (path === "/dev") Route = Dev;
+  if (path === "/casual") Route = Casual;
+
+  return (
+    <Suspense
+      fallback={<main className="min-h-screen bg-[#0b1320]" aria-busy="true" />}
+    >
+      <Route />
+    </Suspense>
+  );
 }
 
 export default App;
