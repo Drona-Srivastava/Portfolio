@@ -1,4 +1,4 @@
-# Drona Portfolio
+# Dual Mode Portfolio
 
 A dual-mode personal portfolio built with React, Vite, and Tailwind CSS.
 
