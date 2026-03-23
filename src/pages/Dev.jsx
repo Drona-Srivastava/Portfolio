@@ -277,10 +277,11 @@ export default about;`,
   },
 
   {
-    name: "Algorithm Visualizer",
+    name: "Algo Engine",
     tech: ["HTML", "CSS", "JS"],
-    description: "Visualizer for Dijkstra, Huffman, Kruskal algorithms",
-    github: "https://github.com/Drona-Srivastava/Algo-visualizer"
+    description:
+      "Interactive React app for algorithm learning with visual simulation, step playback, and explanation-first workflows",
+    github: "https://github.com/Drona-Srivastava/Algo-engine"
   }
 ];
 

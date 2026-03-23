@@ -84,12 +84,12 @@ function Casual() {
         link: "https://github.com/Drona-Srivastava/EduPlay",
       },
       {
-        name: "Algorithm Visualizer",
+        name: "Algo Engine",
         description:
-          "Interactive visualization suite for Dijkstra, Huffman, and Kruskal with step-by-step animation.",
+          "Interactive React app for learning algorithms through visual simulation, step-by-step execution, and explanation-first workflows.",
         points: [
-          "Implemented dynamic graph rendering and controls for traversal pace.",
-          "Designed educational overlays to explain each algorithm step.",
+          "Supports category browsing, algorithm detail pages, and custom user input.",
+          "Includes previous, next, and auto-play controls with explanation timeline.",
         ],
         tech: ["JavaScript", "HTML", "CSS"],
         link: "https://github.com/Drona-Srivastava/Algo-visualizer",
@@ -311,7 +311,7 @@ function Casual() {
             ))}
           </div>
         </MotionSection>
-        
+
         <MotionSection
           id="experience"
           className="scroll-mt-24 py-14"
