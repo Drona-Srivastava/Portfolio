@@ -1,93 +1,52 @@
-# Algo Engine
+# Drona Portfolio
 
-Algo Engine is an interactive React application for learning algorithms through visual simulation, step-by-step execution, and explanation-first workflows.
+A dual-mode personal portfolio built with React, Vite, and Tailwind CSS.
 
-The project supports category browsing, algorithm detail pages, custom user input, playback controls, and internal state panels (graphs, tables, and iteration traces).
+This project presents the same profile through two different experiences:
 
-## Highlights
+- Casual Mode: a clean, scroll-based portfolio with animated sections for skills, experience, education, and projects.
+- Programmer Mode: an interactive developer-themed interface with a file explorer, code-style content view, and terminal-like command system.
 
-- Category-based learning flow from home page to algorithm simulation
-- Dedicated simulation engine for sorting, searching, graph, and dynamic-programming problems
-- Step playback with previous, next, and auto-play controls
-- Visual state views:
-  - Numeric bar charts
-  - Graph node/edge panels
-  - DP/state tables
-  - Token/chip views for text-like sequences
-- Written explanation timeline for every simulation step
+## Live Experience
+
+- Home route lets visitors choose their preferred view.
+- Casual route focuses on readability and professional presentation.
+- Dev route emphasizes interactivity, command input, and VS Code-inspired UI details.
+
+## Key Features
+
+- Two distinct portfolio journeys from a single app.
+- Lazy-loaded pages for faster initial load.
+- Animated transitions powered by Framer Motion.
+- Responsive design for desktop and mobile.
+- Interactive terminal commands in Programmer Mode.
+- Clickable links and email copy interactions in code-like panels.
+- Resume and social profile integration.
 
 ## Tech Stack
 
-- React 19
-- React Router DOM
-- Framer Motion
+- React
 - Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
 - ESLint
 
 ## Project Structure
 
-Core application files:
+- src/components/Home.jsx: landing page and mode selection.
+- src/pages/Casual.jsx: standard portfolio experience.
+- src/pages/Dev.jsx: terminal-style interactive portfolio.
+- src/App.jsx: lightweight route selection.
+- src/main.jsx: app entry point.
 
-- src/main.jsx: entry point
-- src/App.jsx: router setup
-- src/pages/Home.jsx: landing page
-- src/pages/CategoryPage.jsx: per-category algorithm listing
-- src/pages/AlgorithmSimulation.jsx: main simulation experience
-- src/components/AlgoCard.jsx: category card component used on home page
+## Routes
 
-Simulation and data layers:
+- /: mode selection page.
+- /casual: casual portfolio view.
+- /dev: programmer portfolio view.
 
-- src/data/algorithms.js: home page category cards
-- src/data/categoryAlgorithms.js: category to algorithm catalog mapping
-- src/utils/algorithmSimulations.js: generic simulation engine and input specs
-- src/utils/sortingSimulations.js: sorting-focused simulation utilities
-
-Styling and docs:
-
-- src/index.css: global site styles
-- src/styles/sorting.css: category/simulation styles
-- docs/simulation-inputs.md: algorithm input formats and test cases
-
-## Routing
-
-The app uses dynamic routes:
-
-- /: home page
-- /:categoryId: category algorithm listing
-- /:categoryId/:algorithmId: algorithm simulation page
-
-Examples:
-
-- /sorting
-- /sorting/bubble
-- /graphs/topological
-- /dp/knapsack
-
-## Supported Categories
-
-- Sorting and Searching
-- Graph Algorithms
-- Dynamic Programming
-- Greedy Algorithms
-- Tree Algorithms
-- Pathfinding Algorithms
-- String Algorithms
-- Backtracking Algorithms
-
-## Simulation Input Modes
-
-The simulator selects input UI and validation rules by algorithm type:
-
-- numeric list mode
-- numeric search mode (list + target)
-- graph mode (node count, edges, optional start/target)
-- knapsack mode (weights, values, capacity)
-- lcs mode (two strings)
-- generic value-list mode
-
-For exact test cases and examples, see docs/simulation-inputs.md.
-
-## Local Development
+## Getting Started
 
 1. Install dependencies
 
@@ -115,43 +74,17 @@ npm run preview
 
 ## Scripts
 
-- npm run dev: start Vite dev server
-- npm run build: create production build
-- npm run preview: serve build output locally
-- npm run lint: run ESLint checks
+- npm run dev: run Vite development server.
+- npm run build: create production build.
+- npm run preview: preview production build locally.
+- npm run lint: run ESLint.
 
-## Deployment (Vercel)
+## Deployment
 
-This repository includes vercel.json with an SPA rewrite to index.html for all paths.
+The project includes a Vercel SPA rewrite configuration in vercel.json so direct navigation to /casual and /dev works correctly in production.
 
-Why this matters:
+## Contact
 
-- React Router uses browser history routes
-- Direct navigation to deep links must resolve to the frontend entry HTML
-- Without rewrite support, routes like /graphs/dfs can return 404 in production
-
-## Accessibility and UX Notes
-
-- Keyboard-friendly interactions on clickable cards
-- High-contrast simulation panels for readability
-- Step explanations to support conceptual understanding beyond animation
-
-## Extending the Project
-
-Common next enhancements:
-
-- Add mathematically strict simulators for remaining placeholder algorithms
-- Add per-step pseudocode highlighting
-- Add export/share of input presets
-- Add automated tests for simulation engines and route-level smoke tests
-
-## Contributing
-
-1. Create a feature branch
-2. Keep changes scoped and documented
-3. Run lint before opening a PR
-4. Update docs/simulation-inputs.md when input rules change
-
-## License
-
-No license file is currently included. Add one if you plan to distribute publicly.
+- GitHub: https://github.com/Drona-Srivastava
+- LinkedIn: https://www.linkedin.com/in/drona-srivastava-141a4a288/
+- Email: srivastavadrona@gmail.com
