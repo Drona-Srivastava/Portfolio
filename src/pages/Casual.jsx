@@ -230,7 +230,7 @@ function Casual() {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1bDn6PxBuCt6EmsZONjZiUbgKB7-CTBs0/view?usp=sharing"
+                href="https://drive.google.com/file/d/15Z-c274G3NeqIPbdz0UnCuVpqja9csgj/view?usp=drive_link"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-[#f1f4f7] px-5 py-2.5 text-sm text-[#101828] hover:opacity-90 transition"
