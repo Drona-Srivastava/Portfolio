@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 const Home = lazy(() => import("./components/Home"));
@@ -14,11 +15,14 @@ function App() {
   if (path === "/casual") Route = Casual;
 
   return (
-    <Suspense
-      fallback={<main className="min-h-screen bg-[#0b1320]" aria-busy="true" />}
-    >
-      <Route />
-    </Suspense>
+    <>
+      <Suspense
+        fallback={<main className="min-h-screen bg-[#0b1320]" aria-busy="true" />}
+      >
+        <Route />
+      </Suspense>
+      <Analytics />
+    </>
   );
 }
 
