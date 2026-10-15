@@ -1,69 +1,38 @@
+import { FiArrowRight, FiCode, FiLayers } from "react-icons/fi";
+import { profile } from "../data/portfolio";
+
 function Home() {
   return (
-    <main
-      className="h-screen overflow-hidden flex flex-col items-center justify-center 
-                 bg-gradient-to-b from-[#0f1b2d] to-[#0b1320] text-white px-6"
-    >
-      {/* Title */}
-      <h1 className="text-5xl md:text-6xl font-bold mb-4 text-center tracking-tight">
-        Choose your path
-      </h1>
+    <main className="home-shell">
+      <nav className="home-nav wrap">
+        <a className="wordmark" href="/" aria-label="Drona Srivastava home">Drona Srivastava<span>.</span></a>
+        <a className="nav-link" href={profile.github} target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+      </nav>
 
-      <p className="text-green-400 mb-14 text-lg">Two programs. Same output.</p>
+      <section className="home-hero wrap">
+        <div className="eyebrow"><span className="status-dot" /> SOFTWARE ENGINEERING · AI & ML</div>
+        <h1>Building useful<br /><em>things with code.</em></h1>
+        <p className="home-intro">I’m {profile.name}, a computer science student at VIT Chennai. I make thoughtful applications across AI, web, and developer tools.</p>
+        <div className="home-meta"><span>CHENNAI, INDIA</span><span>VIT CHENNAI · CSE AI & ML</span></div>
+      </section>
 
-      {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Casual Card */}
-        <a href="/casual">
-          <div
-            className="w-80 p-8 rounded-2xl bg-[#162338] 
-                       border border-white/5
-                       shadow-lg
-                       hover:scale-105
-                       hover:shadow-[0_0_40px_rgba(20,184,166,0.25)]
-                       transition-all duration-300 ease-in-out
-                       text-center cursor-pointer"
-          >
-            <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-purple-600 flex items-center justify-center text-xl">
-              📋
-            </div>
-
-            <h2 className="text-teal-400 font-semibold text-lg mb-2">
-              Casual Experience
-            </h2>
-
-            <p className="text-gray-400 text-sm">Simple, Clean, Direct.</p>
-          </div>
-        </a>
-
-        {/* Dev Card */}
-        <a href="/dev">
-          <div
-            className="w-80 p-8 rounded-2xl bg-[#162338] 
-                       border border-white/5
-                       shadow-lg opacity-90
-                       hover:scale-105
-                       hover:shadow-[0_0_40px_rgba(236,72,153,0.25)]
-                       transition-all duration-300 ease-in-out
-                       text-center cursor-pointer"
-          >
-            <div
-              className="w-12 h-12 mx-auto mb-4 rounded-lg 
-                         bg-purple-600 flex items-center justify-center text-xl"
-            >
-              {"</>"}
-            </div>
-
-            <h2 className="text-pink-400 font-semibold text-lg mb-2">
-              Programmer Approach
-            </h2>
-
-            <p className="text-gray-400 text-sm">
-              Reactive, Dynamic, Interactive
-            </p>
-          </div>
-        </a>
-      </div>
+      <section className="mode-section wrap" aria-labelledby="mode-title">
+        <div className="section-kicker"><span>01 / PICK YOUR VIEW</span><span className="hairline" /></div>
+        <h2 id="mode-title" className="mode-heading">Two ways to explore.<br /><span>The same work.</span></h2>
+        <div className="mode-grid">
+          <a className="mode-card mode-card-primary" href="/casual">
+            <div className="mode-card-top"><span className="mode-icon"><FiLayers /></span><span className="card-index">01</span></div>
+            <div><p className="card-label">THE PORTFOLIO</p><h3>Explore the work</h3><p className="mode-description">Projects, experience, and the ideas behind what I build.</p></div>
+            <span className="mode-arrow"><FiArrowRight /></span>
+          </a>
+          <a className="mode-card mode-card-secondary" href="/dev">
+            <div className="mode-card-top"><span className="mode-icon"><FiCode /></span><span className="card-index">02</span></div>
+            <div><p className="card-label">THE WORKSPACE</p><h3>Meet the terminal</h3><p className="mode-description">Open files, explore the source-style profile, and try a command.</p></div>
+            <span className="mode-arrow"><FiArrowRight /></span>
+          </a>
+        </div>
+      </section>
+      <footer className="home-footer wrap"><span>© 2026 {profile.name}</span><a href={`mailto:${profile.email}`}>{profile.email}</a></footer>
     </main>
   );
 }
