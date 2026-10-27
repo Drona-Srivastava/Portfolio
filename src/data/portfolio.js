@@ -8,7 +8,7 @@ export const profile = {
   github: "https://github.com/Drona-Srivastava",
   linkedin: "https://www.linkedin.com/in/drona-srivastava-141a4a288/",
   resume:
-    "https://drive.google.com/file/d/15Z-c274G3NeqIPbdz0UnCuVpqja9csgj/view?usp=drive_link",
+    "https://drive.google.com/drive/folders/1YFkyWbvH-S6xHlhE-peM-O42CNuDYkxM",
   summary:
     "I build thoughtful software across web, AI, and developer tooling—from learning experiences powered by AI to lightweight Linux utilities.",
 };
